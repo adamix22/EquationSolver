@@ -1,7 +1,7 @@
 /*ATANDA ADAMS DAMILARE
  * 07067509331
  * CODE LAGOS 4.0 JAVA CLASS 2
- *telegram: adamix
+ * Telegram: adamix
  * */
 import java.util.InputMismatchException;
 
