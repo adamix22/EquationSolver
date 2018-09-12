@@ -2,17 +2,9 @@
  * 07067509331
  * CODE LAGOS 4.0 JAVA CLASS 2
  * */
-
-
-
-
-
-
-
 import java.util.InputMismatchException;
 
 import java.util.Scanner;
-import java.io.*;
 public class Project {
 	static Scanner sc= new Scanner(System.in);
 public static void Welcome(){
@@ -20,8 +12,33 @@ public static void Welcome(){
 	  System.out.println("");
 	  System.out.println("***************** Welcome!*********************"); 
 	}
+public static void Continue() {
+	int a;
+	while (true) {
+	try {
+	System.out.println("Do you want to calculate for another equation? reply 1 for Yes OR 2 for No");
+	a=sc.nextInt();
+	if(a==1) {
+		EquList();
+		
+	}
+	else if(a==2) {
+		System.out.println("Thank you for using our Application");
+		System.exit(0);
+	}
+	else {
+		System.out.println("incorrect, choose 1 or 2");
+	}
+	}
+	catch(InputMismatchException e) {
+		System.out.println("incorrect, choose 1 or 2");
+		sc.next();
+	}
+	}
+	
+}
 public static void EquList(){
-int a = 0;
+int a = 0 ;
 
   System.out.println("This is the list of What this program can currently solve,Please choose 1-10 accordingly");
   System.out.println("1.Area of a circle");
@@ -84,7 +101,7 @@ a=sc.nextInt();
   
    
 public static void PeriOfRect() {
-	double l,w,input1 = 0,input2 = 0,peri = 0;
+	double input1 = 0,input2 = 0,peri = 0;
 	System.out.println("calculate the perimeter of a rectangle");
 	try {
 	System.out.println("Enter the value for length");
@@ -235,7 +252,7 @@ public static void CirOfCircle() {
 		System.out.println("The perimeter is: "+peri);	
 	}
 	else if(output==2) {
-		System.out.println("Enter the value of diameter in metre");
+		System.out.println("Enter the value of diameter");
 		d=sc.nextDouble();
 		peri=(3.142)*d;
 		System.out.println("the perimeter is:"+peri);		
@@ -286,7 +303,9 @@ public static void AreaOfCircle(){
 		Project a=new Project();
 		a.Welcome();
 		a.EquList();
+		a.Continue();
 
 	}
 
 }
+
