@@ -21,7 +21,7 @@ public static void Welcome(){
 	  System.out.println("***************** Welcome!*********************"); 
 	}
 public static void EquList(){
-int a = 0,b ;
+int a = 0;
 
   System.out.println("This is the list of What this program can currently solve,Please choose 1-10 accordingly");
   System.out.println("1.Area of a circle");
